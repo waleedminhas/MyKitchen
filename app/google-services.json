@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "467718237628",
+    "project_id": "our-kitchen-693ed",
+    "storage_bucket": "our-kitchen-693ed.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:467718237628:android:c05644bbac9fa108210fb9",
+        "android_client_info": {
+          "package_name": "comp5216.sydney.edu.au.ourkitchen"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "467718237628-hmjlm7bnavvq6ppv6h57751gk75r17av.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCRercYJlRr23iW0RFGr6V9MmXn3jHvA6E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "467718237628-hmjlm7bnavvq6ppv6h57751gk75r17av.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
