@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.profile.ProfileEdit">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/privacy_title"
+            style="@style/TextAppearance.AppCompat.Large"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="@string/privacy"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <RadioGroup
+            android:id="@+id/privacy_radio_group_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:orientation="horizontal"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/privacy_title">
+
+            <RadioButton
+                android:id="@+id/radioEditPrivateOption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/private_profile" />
+
+            <RadioButton
+                android:id="@+id/radioEditPublicOption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/public_profile" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/edit_details_label"
+            style="?android:textAppearanceLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="@string/details"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/privacy_radio_group_edit" />
+
+        <Button
+            android:id="@+id/edit_details_button"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_baseline_edit_24"
+            android:drawableTint="@color/primaryColor"
+            android:text="@string/edit"
+            app:layout_constraintBaseline_toBaselineOf="@id/edit_details_label"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/edit_details_first_name_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:minWidth="100dp"
+            android:text="@string/first_name"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edit_details_label" />
+
+        <TextView
+            android:id="@+id/edit_details_first_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="@string/first"
+            app:layout_constraintBaseline_toBaselineOf="@id/edit_details_first_name_label"
+            app:layout_constraintStart_toEndOf="@id/edit_details_first_name_label" />
+
+        <TextView
+            android:id="@+id/edit_details_last_name_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:minWidth="100dp"
+            android:text="@string/last_name"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edit_details_first_name_label" />
+
+        <TextView
+            android:id="@+id/edit_details_last_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="@string/last"
+            app:layout_constraintBaseline_toBaselineOf="@id/edit_details_last_name_label"
+            app:layout_constraintStart_toEndOf="@id/edit_details_last_name_label" />
+
+        <TextView
+            android:id="@+id/edit_details_email_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:minWidth="100dp"
+            android:paddingBottom="20dp"
+            android:text="@string/email"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edit_details_last_name_label" />
+
+        <TextView
+            android:id="@+id/edit_details_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="@string/email_example_2"
+            app:layout_constraintBaseline_toBaselineOf="@id/edit_details_email_label"
+            app:layout_constraintStart_toEndOf="@id/edit_details_email_label" />
+
+        <TextView
+            android:id="@+id/edit_interests_label"
+            style="?android:textAppearanceLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="@string/interests"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edit_details_email_label" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/edit_interests_button"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_baseline_edit_24"
+            android:drawableTint="@color/primaryColor"
+            android:foregroundTint="@color/primaryColor"
+            android:text="@string/edit"
+            app:layout_constraintBaseline_toBaselineOf="@id/edit_interests_label"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/edit_details_interests_list_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:minWidth="100dp"
+            android:paddingBottom="20dp"
+            android:text="@string/interests"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edit_interests_label" />
+
+        <TextView
+            android:id="@+id/edit_details_interests_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="@string/interests_example"
+            app:layout_constraintBaseline_toBaselineOf="@id/edit_details_interests_list_label"
+            app:layout_constraintStart_toEndOf="@id/edit_details_interests_list_label" />
+
+        <TextView
+            android:id="@+id/edit_friends_label"
+            style="?android:textAppearanceLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:text="@string/edit_profile_friends"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edit_details_interests_list_label" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/friends_recycler_list_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edit_friends_label" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
