@@ -1,0 +1,31 @@
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory app:title="Cellular">
+        <SwitchPreferenceCompat
+            app:allowDividerBelow="true"
+            app:key="@string/cellular_pref_key"
+            app:summaryOff="@string/cellular_summary_off"
+            app:summaryOn="@string/cellular_summary_on"
+            app:title="@string/cellular_title" />
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="Account">
+        <Preference
+            app:key="@string/update_password"
+            app:title="@string/update_password" />
+
+        <Preference
+            app:key="@string/logout"
+            app:title="@string/logout" />
+
+        <Preference
+            app:key="@string/remove_account"
+            app:title="@string/remove_account" />
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="Recovery">
+        <Preference
+            app:key="@string/send_password_reset_email"
+            app:title="@string/send_password_reset_email" />
+    </PreferenceCategory>
+</PreferenceScreen>

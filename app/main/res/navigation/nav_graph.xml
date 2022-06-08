@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/newsfeed">
+    <fragment
+        android:id="@+id/newsfeed"
+        android:name="comp5216.sydney.edu.au.ourkitchen.ui.newsfeed.Newsfeed"
+        android:label="Newsfeed"
+        tools:layout="@layout/fragment_newsfeed">
+
+        <action
+            android:id="@+id/action_newsfeed_to_profile"
+            app:destination="@id/profile" />
+
+        <action
+            android:id="@+id/action_newsfeed_to_createPost"
+            app:destination="@id/createPost" />
+
+        <action
+            android:id="@+id/action_newsfeed_to_showProfile"
+            app:destination="@id/showProfile" />
+
+        <action
+            android:id="@+id/action_newsfeed_to_search"
+            app:destination="@id/search" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/chat"
+        android:name="comp5216.sydney.edu.au.ourkitchen.ui.chat.Chat"
+        android:label="Chat"
+        tools:layout="@layout/fragment_chat">
+
+        <action
+            android:id="@+id/action_chat_to_chat_search"
+            app:destination="@id/chat_search" />
+
+        <action
+            android:id="@+id/action_chat_to_message"
+            app:destination="@id/message" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/chat_search"
+        android:name="comp5216.sydney.edu.au.ourkitchen.ui.chat.ChatSearch"
+        android:label="Chat Search"
+        tools:layout="@layout/fragment_chat_search" />
+
+    <fragment
+        android:id="@+id/message"
+        android:name="comp5216.sydney.edu.au.ourkitchen.ui.chat.Messages"
+        android:label="Messages"
+        tools:layout="@layout/fragment_message" />
+
+    <fragment
+        android:id="@+id/profile"
+        android:name="comp5216.sydney.edu.au.ourkitchen.ui.profile.Profile"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile">
+
+        <action
+            android:id="@+id/action_profile_to_profileEdit"
+            app:destination="@id/profileEdit" />
+
+        <action
+            android:id="@+id/action_profile_to_pendingFriendRequests"
+            app:destination="@id/pendingFriendRequests" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/saved"
+        android:name="comp5216.sydney.edu.au.ourkitchen.ui.saved.Saved"
+        android:label="Saved Recipes"
+        tools:layout="@layout/fragment_saved">
+
+        <action
+            android:id="@+id/action_saved_to_showProfile"
+            app:destination="@id/showProfile" />
+
+        <action
+            android:id="@+id/action_saved_to_search"
+            app:destination="@id/search" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/settings"
+        android:name="comp5216.sydney.edu.au.ourkitchen.ui.settings.Settings"
+        android:label="Settings"
+        tools:layout="@layout/fragment_settings" />
+
+    <fragment
+        android:id="@+id/profileEdit"
+        android:name="comp5216.sydney.edu.au.ourkitchen.ui.profile.ProfileEdit"
+        android:label="Edit Profile"
+        tools:layout="@layout/fragment_profile_edit">
+
+        <action
+            android:id="@+id/action_profileEdit_to_editProfileDetails"
+            app:destination="@id/editProfileDetails" />
+
+        <action
+            android:id="@+id/action_profileEdit_to_editProfileInterests"
+            app:destination="@id/editProfileInterests" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/search"
+        android:name="comp5216.sydney.edu.au.ourkitchen.ui.search.Search"
+        android:label="Search Recipes By Tag"
+        tools:layout="@layout/fragment_search">
+
+        <argument
+            android:name="searchType"
+            app:argType="string" />
+
+        <action
+            android:id="@+id/action_search_to_newsfeed"
+            app:destination="@id/newsfeed" />
+
+        <action
+            android:id="@+id/action_search_to_saved"
+            app:destination="@id/saved" />
+
+        <action
+            android:id="@+id/action_search_to_tagView"
+            app:destination="@id/tagView" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/createPost"
+        android:name="comp5216.sydney.edu.au.ourkitchen.ui.createpost.CreatePost"
+        android:label="Create Post"
+        tools:layout="@layout/fragment_createpost">
+
+        <action
+            android:id="@+id/action_createPost_to_newsfeed"
+            app:destination="@id/newsfeed" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/showProfile"
+        android:name="comp5216.sydney.edu.au.ourkitchen.ui.newsfeed.ShowProfile"
+        android:label="Profile"
+        tools:layout="@layout/fragment_show_profile">
+
+        <argument
+            android:name="userId"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/pendingFriendRequests"
+        android:name="comp5216.sydney.edu.au.ourkitchen.ui.profile.PendingFriendRequests"
+        android:label="Pending Friend Requests"
+        tools:layout="@layout/fragment_pending_friend_requests" />
+
+    <fragment
+        android:id="@+id/tagView"
+        android:name="comp5216.sydney.edu.au.ourkitchen.ui.taggedview.TagView"
+        android:label="Tag Posts"
+        tools:layout="@layout/fragment_tag_view">
+
+        <argument
+            android:name="tag"
+            app:argType="string" />
+
+        <action
+            android:id="@+id/action_tagView_to_search"
+            app:destination="@id/search" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/postComments"
+        android:name="comp5216.sydney.edu.au.ourkitchen.ui.comments.PostComments"
+        android:label="Comments"
+        tools:layout="@layout/fragment_post_comments">
+
+        <argument
+            android:name="id"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/findFriends"
+        android:name="comp5216.sydney.edu.au.ourkitchen.ui.findfriends.FindFriends"
+        android:label="Find Co-Chefs"
+        tools:layout="@layout/fragment_find_friends" />
+
+    <fragment
+        android:id="@+id/editProfileDetails"
+        android:name="comp5216.sydney.edu.au.ourkitchen.ui.profile.EditProfileDetails"
+        android:label="Edit Details"
+        tools:layout="@layout/fragment_edit_profile_details" />
+
+    <fragment
+        android:id="@+id/editProfileInterests"
+        android:name="comp5216.sydney.edu.au.ourkitchen.ui.profile.EditProfileInterests"
+        android:label="Edit Interest"
+        tools:layout="@layout/fragment_edit_profile_interests" />
+</navigation>

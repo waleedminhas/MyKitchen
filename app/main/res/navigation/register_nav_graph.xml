@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/register_nav_graph"
+    app:startDestination="@id/registerDetails">
+
+    <fragment
+        android:id="@+id/registerInterests"
+        android:name="comp5216.sydney.edu.au.ourkitchen.ui.login.RegisterInterests"
+        android:label="fragment_register_interests"
+        tools:layout="@layout/fragment_register_interests">
+
+        <action
+            android:id="@+id/action_registerInterests_to_registerPrivacy"
+            app:destination="@id/registerPrivacy" />
+
+        <action
+            android:id="@+id/action_registerInterests_to_registerDetails"
+            app:destination="@id/registerDetails" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/registerDetails"
+        android:name="comp5216.sydney.edu.au.ourkitchen.ui.login.RegisterDetails"
+        android:label="fragment_register_details"
+        tools:layout="@layout/fragment_register_details">
+
+        <action
+            android:id="@+id/action_registerDetails_to_registerInterests"
+            app:destination="@id/registerInterests" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/registerPrivacy"
+        android:name="comp5216.sydney.edu.au.ourkitchen.ui.login.RegisterPrivacy"
+        android:label="fragment_register_privacy"
+        tools:layout="@layout/fragment_register_privacy">
+
+        <action
+            android:id="@+id/action_registerPrivacy_to_registerInterests"
+            app:destination="@id/registerInterests" />
+
+        <action
+            android:id="@+id/action_registerPrivacy_to_registerDetails"
+            app:destination="@id/registerDetails" />
+    </fragment>
+</navigation>
